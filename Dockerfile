@@ -6,7 +6,6 @@ RUN mkdir -p /var/log/supervisor
 RUN mkdir -p /var/log/redis
 RUN mkdir -p /var/log/celery
 COPY ./supervisord.conf /etc/
-COPY ./celeryd /etc/default/
 
 # set work directory
 WORKDIR /app
