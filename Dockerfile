@@ -27,6 +27,8 @@ RUN pip install -r requirements.txt
 COPY . .
 RUN chmod -R 777 /app
 
+RUN chmod +x /app/entrypoint.sh
 
 
+ENTRYPOINT [ "./entrypoint.sh" ]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
